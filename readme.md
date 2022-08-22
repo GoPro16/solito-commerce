@@ -1,5 +1,7 @@
 # Not Your Average Astronauts (NYAA)
 
+[![Watch the video](https://i.imgur.com/dltRfDd.mp4)](https://i.imgur.com/dltRfDd.mp4)
+
 You must have docker-compose for the database to get stood up.
 
 ## Installation & Setup
