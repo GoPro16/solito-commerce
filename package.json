@@ -22,8 +22,11 @@
     "typescript": "^4.6.2"
   },
   "scripts": {
+    "backend": "yarn workspace graphql-app dev",
     "native": "cd apps/expo && expo start",
     "web": "cd apps/next && yarn next",
-    "generate": "graphql-codegen"
+    "generate:graphql": "graphql-codegen",
+    "generate:prisma": "cd apps/graphql && npx prisma generate",
+    "seed": "yarn workspace graphql-app seed"
   }
 }
