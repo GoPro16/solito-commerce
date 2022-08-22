@@ -1,0 +1,21 @@
+{
+  "version": "0.0.0",
+  "name": "app",
+  "main": "index.ts",
+  "dependencies": {
+    "@expo/vector-icons": "^13.0.0",
+    "@react-navigation/bottom-tabs": "^6.3.2",
+    "@react-navigation/native": "^6.0.8",
+    "@react-navigation/native-stack": "^6.5.0",
+    "dripsy": "^3.6.0",
+    "expo-linking": "^3.0.0",
+    "moti": "canary",
+    "solito": "latest"
+  },
+  "sideEffects": false,
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.3.0",
+    "@types/jest": "^28.1.7"
+  }
+}

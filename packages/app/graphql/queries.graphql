@@ -1,0 +1,45 @@
+fragment ProductFragment on Product {
+  id
+  name
+  price
+  shortDescription
+  description
+  img
+}
+
+query cartConnection {
+  cart {
+    edges {
+      node {
+        quantity
+        product {
+          ...ProductFragment
+        }
+      }
+    }
+  }
+}
+
+query productConnection {
+  products {
+    edges {
+      node {
+        ...ProductFragment
+      }
+    }
+  }
+}
+
+query productNode($id: ID!) {
+  node(id: $id) {
+    ...ProductFragment
+  }
+}
+
+mutation addToCart($productId: ID!) {
+  addToCart(productId: $productId)
+}
+
+mutation removeFromCart($productId: ID!) {
+  removeFromCart(productId: $productId)
+}

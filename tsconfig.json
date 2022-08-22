@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+    "paths": {
+      "app/*": ["./packages/app/*"],
+      "graphql/*": ["./packages/graphql/*"]
+    }
+  },
+  "extends": "expo/tsconfig.base"
+}

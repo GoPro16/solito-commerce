@@ -1,0 +1,25 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator pothos {
+  provider = "prisma-pothos-types"
+  output   = "./pothos-types.ts"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id                String @id @default(auto()) @map("_id") @db.ObjectId
+  name              String
+  short_description String
+  description       String
+  img               String
+  price             Int
+}

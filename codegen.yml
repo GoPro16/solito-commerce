@@ -1,0 +1,39 @@
+# codegen.yml
+overwrite: true
+errorsOnly: true
+schema: ./apps/graphql/build-schema.js
+# This should be updated to match your client files
+documents: './packages/app/graphql/**/!(*.d).{ts,tsx,graphql}'
+generates:
+  ./packages/app/generated/global.d.ts:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+    config:
+      skipTypename: false
+      typesPrefix: I
+      noExport: true
+      scalars:
+        ISO8601DateTime: string
+        JsonCompatible: JsonCompatible
+  ./packages/app/generated/gql-types.ts:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+    config:
+      skipTypename: false
+      typesPrefix: I
+      noExport: false
+      scalars:
+        ISO8601DateTime: string
+        JsonCompatible: JsonCompatible
+  ./packages/app/generated/hooks.tsx:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
+    config:
+      typesPrefix: I
+      withComponent: false
+      withHOC: false
+      withHooks: true

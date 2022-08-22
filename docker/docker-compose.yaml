@@ -1,0 +1,19 @@
+version: '3'
+services:
+  database:
+    image: mongo:latest
+    container_name: 'mongo-container'
+    command: --replSet rs0
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongodb_data_container:/data/db
+  redis:
+    container_name: redis
+    image: redis:6.2-alpine
+    ports:
+      - 6379:6379
+    # command: redis-server --save 60 1 --requirepass eg85K#G3wm&b --loglevel 
+volumes:
+  mongodb_data_container:
+  redis:
