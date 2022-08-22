@@ -30,6 +30,8 @@ cd docker
 docker-compose up -d
 ```
 
+Once you verify mongo is up and running you can seed the database.
+
 ### Seed database
 
 ```bash
@@ -56,4 +58,10 @@ yarn web
 
 ```bash
 yarn native
+```
+
+## Integration Tests
+
+```bash
+npx cypress open
 ```

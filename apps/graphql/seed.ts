@@ -9,7 +9,7 @@ const load = async () => {
       name: 'Cute Astronaut',
       description: faker.lorem.paragraph(),
       short_description: faker.lorem.sentence(),
-      price: parseInt(faker.random.numeric(5)),
+      price: 500_00,
       img: 'https://img.freepik.com/free-vector/cute-astronaut-dance-cartoon-vector-icon-illustration-technology-science-icon-concept-isolated-premium-vector-flat-cartoon-style_138676-3851.jpg',
     },
     {
@@ -30,7 +30,7 @@ const load = async () => {
       name: 'Not an Astronaut',
       description: faker.lorem.paragraph(),
       short_description: faker.lorem.sentence(),
-      price: parseInt(faker.random.numeric(5)),
+      price: 250_00,
       img: 'https://img.freepik.com/free-vector/cute-cat-holding-fish-board-cartoon-vector-icon-illustration-animal-nature-icon-concept-isolated_138676-5221.jpg',
     },
     {

@@ -1,8 +1,0 @@
-{
-  "name": "e2e",
-  "version": "0.1.0",
-  "private": true,
-  "devDependencies": {
-    "cypress": "^10.6.0"
-  }
-}

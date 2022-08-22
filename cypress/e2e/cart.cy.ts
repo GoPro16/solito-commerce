@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+
 describe('NYAA App', () => {
   beforeEach(() => {
     cy.visit('http://localhost:3000')
@@ -10,7 +11,7 @@ describe('NYAA App', () => {
   })
 
   it('add one product to cart', () => {
-    cy.contains('Green Notebook').click()
+    cy.contains('Cute Astronaut').click()
 
     cy.wait(1000)
 
@@ -21,7 +22,7 @@ describe('NYAA App', () => {
   })
 
   it('add two products to cart', () => {
-    cy.contains('Green Notebook').click()
+    cy.contains('Cute Astronaut').click()
 
     cy.get('[data-testid="price"]').invoke('text').should('eq', '$500.00')
     cy.contains('Add to Bag').click()
@@ -32,13 +33,13 @@ describe('NYAA App', () => {
   })
 
   it('add two products to cart and remove one', () => {
-    cy.contains('Green Notebook').click()
+    cy.contains('Cute Astronaut').click()
     cy.get('[data-testid="price"]').invoke('text').should('eq', '$500.00')
     cy.contains('Add to Bag').click()
     cy.wait(1000)
 
     cy.contains('Products').click()
-    cy.contains('Brown Notebook').click()
+    cy.contains('Not an Astronaut').click()
     cy.get('[data-testid="price"]').invoke('text').should('eq', '$250.00')
     cy.contains('Add to Bag').click()
     cy.wait(1000)
@@ -46,7 +47,7 @@ describe('NYAA App', () => {
     cy.contains('Cart').click()
     cy.get('[data-testid="Subtotal"]').invoke('text').should('eq', '$750.00')
 
-    cy.contains('Green Notebook')
+    cy.contains('Cute Astronaut')
       .parent()
       .parent()
       .parent()
