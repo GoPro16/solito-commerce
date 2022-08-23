@@ -32,6 +32,12 @@ cd docker
 docker-compose up -d
 ```
 
+You may also have to run the mongo init to enable sharding
+
+```bash
+sh init-mongo.sh
+```
+
 Once you verify mongo is up and running you can seed the database.
 
 ### Seed database
